@@ -173,6 +173,8 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
   function initValine () {
     const valine = new Valine(Object.assign({
       el: '#vcomment',
+      enableQQ: true,
+      boolean: true,
       appId: 'BL6WNPiDWejRP20pdB5EBp2Q-gzGzoHsz',
       appKey: 'uG2fyPOUv9gGX5bqnodmVBja',
       avatar: 'mp',
@@ -187,8 +189,8 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
   else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
 }
 
-if ('Valine' === 'Valine' || !false) {
-  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
   else setTimeout(loadValine, 0)
 } else {
   function loadOtherComment () {
