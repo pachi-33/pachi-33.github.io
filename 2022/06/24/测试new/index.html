@@ -1,0 +1,235 @@
+<!DOCTYPE html><html class="hide-aside" lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>测试new | 火鳥</title><meta name="keywords" content="测试"><meta name="author" content="pachi33"><meta name="copyright" content="pachi33"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="C与C++的区别？一、C++介绍    本贾尼·斯特劳斯特卢普，与1979年4月份贝尔实验室的本贾尼博士在分析UNIX系统分布内核流量分析时，希望有一种有效的更加模块化的工具。    1979年10月完成了预处理器Cpre，为C增加了类机制，也就是面向对象，1983年完成了C++的第一个版本，C with classes也就是C++。    C++与C的不同点：    1、C++基本兼容C的语法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试new">
+<meta property="og:url" content="http://pachi-33.github.io/2022/06/24/%E6%B5%8B%E8%AF%95new/index.html">
+<meta property="og:site_name" content="火鳥">
+<meta property="og:description" content="C与C++的区别？一、C++介绍    本贾尼·斯特劳斯特卢普，与1979年4月份贝尔实验室的本贾尼博士在分析UNIX系统分布内核流量分析时，希望有一种有效的更加模块化的工具。    1979年10月完成了预处理器Cpre，为C增加了类机制，也就是面向对象，1983年完成了C++的第一个版本，C with classes也就是C++。    C++与C的不同点：    1、C++基本兼容C的语法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2022-06-24T15:27:51.000Z">
+<meta property="article:modified_time" content="2022-06-24T15:35:36.402Z">
+<meta property="article:author" content="pachi33">
+<meta property="article:tag" content="测试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://pachi-33.github.io/2022/06/24/%E6%B5%8B%E8%AF%95new/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '测试new',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '06-24 23:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2022/06/24/rvtCUmBLwl8nGiK.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/%E5%9B%BE%E5%BA%93/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">火鳥</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/%E5%9B%BE%E5%BA%93/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">测试new</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-24T15:27:51.000Z" title="发表于 06-24 23:27">06-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-24T15:35:36.402Z" title="更新于 06-24 23:35">06-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%96%BD%E5%B7%A5%E4%B8%AD/">施工中</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>C与C++的区别？<br>一、C++介绍<br>    本贾尼·斯特劳斯特卢普，与1979年4月份贝尔实验室的本贾尼博士在分析UNIX系统分布内核流量分析时，希望有一种有效的更加模块化的工具。<br>    1979年10月完成了预处理器Cpre，为C增加了类机制，也就是面向对象，1983年完成了C++的第一个版本，C with classes也就是C++。<br>    C++与C的不同点：<br>    1、C++基本兼容C的语法<br>    2、支持面向对象的编程思想<br>    3、支持运算符重载<br>    4、支持泛型编程、模板<br>    5、支持异常处理<br>    6、类型检查严格</p>
+<p>二、第一个C++程序<br>    1、文件扩展名<br>        .cpp .cc .C .cxx<br>    2、编译器<br>        g++ 大多数系统需要额外安装，Ubuntu系统下的安装命令：<br>            sudo apt-get update<br>            sudo apt-get install g++<br>        gcc也可以继续使用，但需要增加参数 -xC++ -lstdc++<br>    3、头文件<br>        #include <iostream><br>        #include &lt;stdio.h&gt; 可以继续使用，但C++建议使用 #include <cstdio><br>    4、输入&#x2F;输出<br>        cin &gt;&gt; 输入数据<br>        cout &lt;&lt; 输出数据<br>        cin&#x2F;cout会自动识别类型<br>        scanf&#x2F;printf可以继续使用<br>        注意：cout和cin是类对象，而scanf&#x2F;printf是标准库函数。<br>    5、增加了名字空间<br>        std::cout<br>        using namespace std;</p>
+<p>三、名字空间<br>    1、什么是名字空间<br>    在C++中经常使用多个独立开发的库来完成项目，由于库的作者或开发人员没见过面，因此命名冲突在所难免。<br>    2、为什么需要名字空间<br>    在项目中函数名、全局变量、结构、联合、枚举、类，非常有可能名字冲突，而名字空间就对这些命名进行逻辑空间划分（不是物理单元划分），<br>为了解决命名冲突，C++之父为防止命名冲突给C++设计一个名字空间的机制。<br>    通过使用namespace XXX把库中的变量、函数、类型、结构等包含在名字空间中，形成自己的作用域，避免名字冲突。<br>    namespace xxx<br>    {</p>
+<p>}&#x2F;&#x2F; 没有分号<br>注意：名字空间也是一种标识符，在同一作用域下不能重名。</p>
+<p>3、同名的名字空间有自动合并（为了声明和定义可以分开写）<br>同名的名字空间中如果有重名的依然会命名冲突</p>
+<p>4、名字空间的使用方法<br>::域限定符<br>空间名::标识符 &#x2F;&#x2F; 使用麻烦，但是非常安全<br>using namespace 空间名; 把空间中定义的标识符导入到当前代码中<br>    不建议这样使用，相当于把垃圾分类后，又导入同一个垃圾车，依然会冲突</p>
+<p>5、无名名字空间<br>不属于任何名字空间中的标识符，隶属于无名名字空间。<br>无名名字空间中的成员使用 ::标识符 进行访问。<br>如何访问被屏蔽的全局变量。</p>
+<p>6、名字空间的嵌套<br>名字空间内部可以再定义名字空间，这种名字空间嵌套<br>内层的名字空间与外层的名字空间的成员，可以重名，内层会屏蔽外层的同名标识符。<br>多层的名字空间在使用时逐层分解。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">n1::n2::num;</span><br><span class="line"><span class="keyword">namespace</span> n1</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">namespace</span> n2</span><br><span class="line">    &#123;   </span><br><span class="line">        <span class="type">int</span> num = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">namespace</span> n3</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">​        &#125;</span><br><span class="line">​    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>7、可以</p>
+<p>给名字空间取别名<br>由于名字空间可以嵌套，这样就会导致在使用内层成员时过于麻烦，可以给名字空间取别名来解决这类问题。<br>namespace n123 &#x3D; n1::n2::n3;</p>
+<p>四、C++的结构<br>    1、不再需要 typedef ，在定义结构变量时，可以省略struct关键字<br>    2、成员可以是函数（成员函数），在成员函数中可以直接访问成员变量，不需要.或-&gt;，但是C的结构成员可以是函数指针。<br>    3、有一些隐藏的成员函数（构造、析构、拷贝构造、赋值构造）。<br>    4、可以继承，可以设置成员的访问权限（面向对象）。</p>
+<p>五、C++的联合<br>    1、不再需要 typedef ，在定义结构变量时，可以省略union关键字<br>    2、成员可以是函数（成员函数），在成员函数中可以直接访问成员变量，不需要.或-&gt;，但是C的结构成员可以是函数指针。<br>    3、有一些隐藏的成员函数（构造、析构、拷贝构造、赋值构造）。</p>
+<p>六、C++的枚举<br>    1、定义、使用方法与C语言基本一致。<br>    2、类型检查比C语言更严格</p>
+<p>七、C++的布尔类型<br>    1、C++具有真的布尔类型，bool是C++中的关键字，在C语言中使用布尔类型需要导入头文件stdbool.h（在C11中bool应该是数据类型了）。<br>    2、在C++中 true false 是关键字，而在C语言中不是。<br>    3、在C++中 true false 是1字节，而C语言中是4字节。</p>
+<p>八、C++的void*<br>    1、C语言中void* 可以与任意类型指针 自动转换。<br>    2、C++中void<em>不能给其他类型的指针直接赋值，必须强制类型转换，但其他类型的指针可以自动给void</em>赋值。<br>    3、C++为什么这样修改void*？<br>        为了更安全，所以C++类型检查更严格。</p>
+<p>九、操作符别名<br>    某些特殊语言的键没有~,&amp;符合，国际标准化组织为一些操作符规定了别名，以便使用这些语言的键盘也能输入正确的C&#x2F;C++代码。 C95和C++98以后的语言标准都支持ISO-646<br>    and     &amp;&amp;<br>    or      ||<br>    not     !<br>    {       &lt;%<br>    }       %&gt;<br>    #       :%</p>
+<p>十、函数重载<br>    1、函数重载<br>        在同一作用域下，函数名相同，参数列表不同的函数，构成重载关系。<br>    2、重载实现的机制<br>        C++代码在编译时会把函数的参数类型添加到参数名中，借助这个方式来实现函数重载，也就是C++的函数在编译期间经历换名的过程。<br>    因此，C++代码不能调用C函数（C语言编译器编译出的函数）<br>    3、extern “C” {}<br>        告诉C++编译器按照C语言的方式声明函数，这样C++就可以调用C编译器编译出的函数了（C++目标文件可以与C目标文件合并生成可执行程序）。<br>        如果C想调用C++编译出的函数，需要将C++函数的定义用extern “C”包括一下。<br>        注意：如果两个函数名一样，一定会冲突。<br>    4、重载和作用域<br>        函数的重载关系发生在同一作用域下，不同作用域下的同名函数，构成隐藏关系。<br>    5、重载解析<br>        当调用函数时，编译器根据实参的类型和形参的匹配情况，选择一个确定的重载版本，这个过程叫重载解析。<br>        实参的类型和形参的匹配情况有三种：<br>            1、编译器找到与实参最佳的匹配函数，编译器将生成调用代码。<br>            2、编译找不到匹配函数，编译器将给出错误信息。<br>            3、编译器找到多个匹配函数，但没有一个最佳的，这种错误叫二义性。<br>        在大多数情况下编译器都能立即找到一个最佳的调用版本，但如果没有，编译就会进行类型提升，这样备选函数中就可能具有多个可调用<br>的版本，这样就可能产生二义性错误。<br>    6、确定存在函数的三个步骤<br>        1）候选函数<br>        函数调用的第一步就是确定所有可调用的函数的集合（函数名、作用域），该集合中的函数就是候选函数。<br>        2）选择可行函数<br>        从候选函数中选择一个或多个函数，选择的标准是参数个数相同，而且通过类型提升实参可被隐式转换为形参。<br>        3）寻找最佳匹配<br>        优先每个参数都完全匹配的方案，其次参数完全匹配的个数，再其次是浪费内存的字节数。<br>    7、指针类型会对函数重载造成影响<br>        C++函数的形参如果是指针类型，编译时函数名中会追加Px。</p>
+<p>十一、默认形参<br>    1、在C++中函数的形参可以设置默认值，调用函数，如果没有提供实参数，则使用默认形参。<br>    2、如果形参只有一部分设置了默认形参，在某个提供了默认值的参数后面，所有的参数都必须提供默认值。<br>    3、函数的默认形参是在编译阶段确定的，因此只能使用常量、常量表达式、全局变量数据作为默认值。<br>    提问：如果函数的声明和定义需要分开，那么默认形参设置在声明、定义，还是声明定义都需要设置？<br>    4、默认形参会对函数重载造成影响，设置默认形参时一定要慎重。</p>
+<p>十二、内联函数<br>    1、普通函数调用时是生成调用指令（跳转），然后当代码执行到调用位置时跳转到函数所在的代码段执行。<br>    2、内联函数就把函数编译好的二进制指令直接复制到函数的调用位置。<br>    3、内联函数的优点就是提高程序的运行速度（因为没有跳转，也不需要返回），但这样会导致可执行文件增大（冗余），也就是牺牲空间来换取时间。<br>    4、内联分为显示内联和隐式内联<br>        显示内联：在函数前 inline（C语言C99标准也支持）<br>        隐式内联：结构、类中内部直接定义的成员函数，则该类型函数会被优化成内联函数。<br>    5、宏函数在调用时会把函数体直接替换到调用位置，与内联函数一样也是使用空间来换取时间，所以宏函数与内联函数的区别（优缺点）？<br>        1、宏函数不是真正的函数，只是代码替换，不会有参数压栈、出栈以及返回值，也不会检查参数类型，因此所有类型都能使用，但这样会<br>有安全隐患。<br>        2、内联函数是真正的函数，被调用时会进行传参，会进行压栈、出栈，可以有返回值，并会严格检查参数类型，这样就不能通用，如果想被<br>多种类型调用需要重载。<br>    6、内联适用的条件<br>        由于内联会造成可执行文件变大，并增加内存开销，因此只有频繁调用的简单函数适合作为内联。<br>        调用比较少的复杂函数，内联后并不显著提高性能，不足以抵消牺牲空间带来的损失，所以不适合内联。<br>        带有递归特性和动态绑定特性的函数，无法实施内联，因此编译器会忽略声明部分的inline关键字。</p>
+<p>十三、引用<br>    引用就是取艺名（别名）。<br>    1、引用的基本特性<br>        引用就是取别名，声明一个标识符为引用，就表示该标识符是另一个对象的外号。<br>        1、引用必须初始化，不存在空引用，但有悬空引用（变量死了，名还留着）。<br>        2、可以引用无名对象（临时对象），但必须使用常引用。<br>        3、引用不能更换目标<br>        4、引用目标如果具有const属性，引用也需要具有const属性。<br>        引用一旦完成了定义和初始化就和普通变量名一样，它就代表了目标，一经引用终身不能再引用其他目标。<br>    2、引用型参数<br>        引用当作函数的参数能达到指针同样的效果，但不具备指针的危险，还比指针方便。<br>        引用可以非常简单的实现函数间共享变量的目的，而且是否使用引用由被调函数说了算。<br>        引用当作函数的参数还能提高传递参数效率，指针至少还需要4字节内存，而引用只需要增加一条标识符与内存之间的绑定（映射）。<br>    3、引用型返回值<br>        不要返回局部变量的引用，会造成悬空引用。<br>        如果返回值是一个临时值（右值），如果非要使用引用接收的话，必须使用常引用。<br>    注意：C++中的引用时一种取别名的机制，而C语言中的指针是一种数据类型（代表内存编号的无符号整数）。<br>    练习1：实现一个C++版本的swap函数。</p>
+<p>指针和引用的相同点和不同点：<br>    相同点：跨函数共享变量，优化传参效率，避免传参的时候调用拷贝构造<br>    不同点：指针有自己的存储空间，借助指针可以使用堆内存，引用不行。引用取别名，指针是数据类型。指针可以为空，引用不可以为空。</p>
+<p>指针可以不初始化，引用必须初始化。指针可以改变指向，引用不能引用其他对象（可以定义指针的指针，不能定义引用的引用。可以定义指针的<br>引用，不能定义引用的指针。可以定义指针的数组，但不能定义引用的数组。可以定义数组的引用）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span>&amp; a,<span class="type">int</span>&amp; b)</span> <span class="comment">//引用</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> temp = a;</span><br><span class="line">	a = b;</span><br><span class="line">	b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">3</span>,b=<span class="number">4</span>;</span><br><span class="line">	<span class="built_in">swap</span>(a,b);</span><br><span class="line">	cout&lt;&lt;a&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;b&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<p>十四、C++的内存管理<br>    1、new&#x2F;delete C++具备申请&#x2F;释放堆内存功能的运算符<br>        相当于C语言中的malloc和free。<br>        new 类型：会自动计算类型所需要字节数，然后从堆中分配对应字节数的内存，并返回内存的首地址（具备类型）。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://pachi-33.github.io">pachi33</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://pachi-33.github.io/2022/06/24/%E6%B5%8B%E8%AF%95new/">http://pachi-33.github.io/2022/06/24/%E6%B5%8B%E8%AF%95new/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://pachi-33.github.io" target="_blank">火鳥</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B5%8B%E8%AF%95/">测试</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/06/24/test-post-tag/"><img class="next-cover" src="https://s2.loli.net/2022/06/24/PqY13t6MA5pkgSe.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">test_post_tag</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/06/23/%E6%B5%8B%E8%AF%95%E5%B8%96/" title="测试帖"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 06-23</div><div class="title">测试帖</div></div></a></div><div><a href="/2022/06/24/test-post-tag/" title="test_post_tag"><img class="cover" src="https://s2.loli.net/2022/06/24/PqY13t6MA5pkgSe.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 06-24</div><div class="title">test_post_tag</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2022/06/24/rvtCUmBLwl8nGiK.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">pachi33</div><div class="author-info__description">我的个人博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pachi-33"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/pachi-33" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lwinlong@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">小 站 施 工 中 。 。 。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/24/%E6%B5%8B%E8%AF%95new/" title="测试new"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试new"/></a><div class="content"><a class="title" href="/2022/06/24/%E6%B5%8B%E8%AF%95new/" title="测试new">测试new</a><time datetime="2022-06-24T15:27:51.000Z" title="发表于 06-24 23:27">06-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/24/test-post-tag/" title="test_post_tag"><img src="https://s2.loli.net/2022/06/24/PqY13t6MA5pkgSe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="test_post_tag"/></a><div class="content"><a class="title" href="/2022/06/24/test-post-tag/" title="test_post_tag">test_post_tag</a><time datetime="2022-06-24T14:49:40.000Z" title="发表于 06-24 22:49">06-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/06/23/%E6%B5%8B%E8%AF%95%E5%B8%96/" title="测试帖">测试帖</a><time datetime="2022-06-23T15:41:27.000Z" title="发表于 06-23 23:41">06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/test-article/" title="test article"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="test article"/></a><div class="content"><a class="title" href="/2022/06/23/test-article/" title="test article">test article</a><time datetime="2022-06-23T12:51:20.000Z" title="发表于 06-23 20:51">06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/21/test-my-site/" title="test_my_site"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="test_my_site"/></a><div class="content"><a class="title" href="/2022/06/21/test-my-site/" title="test_my_site">test_my_site</a><time datetime="2022-06-21T15:57:19.000Z" title="发表于 06-21 23:57">06-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By pachi33</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      enableQQ: true,
+      boolean: true,
+      appId: 'BL6WNPiDWejRP20pdB5EBp2Q-gzGzoHsz',
+      appKey: 'uG2fyPOUv9gGX5bqnodmVBja',
+      avatar: 'mp',
+      serverURLs: '',
+      placeholder: '昵称填写qq可以显示qq头像和昵称哦~',
+      emojiMaps: {"亚可-困":"https://s2.loli.net/2022/06/24/bnKux1syW46FHzN.jpg ","2233娘-大笑":"https://i0.hdslb.com/bfs/emote/16b8794be990cefa6caeba4d901b934a227ee3b8.png","2233娘-吃惊":"https://i0.hdslb.com/bfs/emote/d1628c43d35b1530c0504a643ff80b6189fa0a43.png","2233娘-大哭":"https://i0.hdslb.com/bfs/emote/476a2a60f6e337b8c0697a592e0aa82781f6b33b.png","2233娘-耶":"https://i0.hdslb.com/bfs/emote/d7178e258a0efc969b65ccc2b1322fb235f5dff4.png","2233娘-卖萌":"https://i0.hdslb.com/bfs/emote/ea893aa25355de95ab4f03c2dad3f0c58d0c159e.png","2233娘-疑问":"https://i0.hdslb.com/bfs/emote/0b41f509351958dbb63d472fec0132d1bd03bd14.png","2233娘-汗":"https://i0.hdslb.com/bfs/emote/247cd9df8cdf84b18368c21e3b2dd374e84c0927.png","2233娘-困惑":"https://i0.hdslb.com/bfs/emote/714eeb4eae0d0933b4ff08b7df788b1982f6b940.png","2233娘-怒":"https://i0.hdslb.com/bfs/emote/f31953119c51b9748016440ac0b632f779929b37.png","2233娘-委屈":"https://i0.hdslb.com/bfs/emote/d9d0bf9d358af8d5761093ec66d4e3f60d963a63.png","2233娘-郁闷":"https://i0.hdslb.com/bfs/emote/485203fe7100f2c8fc40b2800a18fe20b35f2f1a.png","2233娘-第一":"https://i0.hdslb.com/bfs/emote/3754ee6e5985bd0bd7dfb668981f2a8733398ebd.png","2233娘-喝水":"https://i0.hdslb.com/bfs/emote/695bf5429472049b52c1e0de586f8a2511195a23.png","2233娘-吐魂":"https://i0.hdslb.com/bfs/emote/e999af499edf38a91ca68b1a9d2f97042c1d6734.png","2233娘-无言":"https://i0.hdslb.com/bfs/emote/fdb5870f32cfaf7949e0f88a13f6feba4a48b719.png","初音未来-抱抱":"https://i0.hdslb.com/bfs/emote/193259652bf6d72a9c52f8111fcd412b31d79298.png","初音未来-nice":"https://i0.hdslb.com/bfs/emote/7f3445c37e0cacaeeeb9a9bbbc7138872ddfbc19.png","初音未来-GKD":"https://i0.hdslb.com/bfs/emote/44caa7ec800837d8860482c214ac792f4c37c490.png","初音未来-问号":"https://i0.hdslb.com/bfs/emote/eaa4e51f78ff3ba6b7a1606d0fb44482515b4424.png","初音未来-吃惊":"https://i0.hdslb.com/bfs/emote/4c262d6c0686391ef129f0c2dcca0a600018f47d.png","初音未来-干杯":"https://i0.hdslb.com/bfs/emote/c5d1de20038102c003c04bb7505de51b91e39fd5.png","初音未来-端碗":"https://i0.hdslb.com/bfs/emote/3de27d6f8e01b1a8db09a64a56d3a744b33ad435.png","初音未来-害怕":"https://i0.hdslb.com/bfs/emote/7fedbd2eb20d6e30985b02c086392f1386db2b9c.png","初音未来-加油":"https://i0.hdslb.com/bfs/emote/4943a9be0a3134125c7d585b4dafde79a9a1990a.png","初音未来-哭了":"https://i0.hdslb.com/bfs/emote/db9b01e5808967a32ed644b490ab47faf0f29ce3.png","初音未来-困了":"https://i0.hdslb.com/bfs/emote/3d442c1d2acc751489ec43d55e5d3b7042e49910.png","初音未来-鬼脸":"https://i0.hdslb.com/bfs/emote/91b2bb5d0db1a668f3269059a809e5330f0a2bd0.png","初音未来-期待":"https://i0.hdslb.com/bfs/emote/f361daba4c64775b05f45fd241eb43072258accd.png","初音未来-生气":"https://i0.hdslb.com/bfs/emote/c527e61be20dfbddcb21d9c07a26b161b01ecacc.png","初音未来-睡了":"https://i0.hdslb.com/bfs/emote/f9c2088fe82105c0d912e2b3a6c6db52cb1abf7f.png","初音未来-委屈":"https://i0.hdslb.com/bfs/emote/55023c31259200e5c821cac526b36e527f455d43.png","初音未来-无语":"https://i0.hdslb.com/bfs/emote/3e32d47239d8f8f8c70cf58cc79f0f8f17383a23.png","初音未来-喜欢":"https://i0.hdslb.com/bfs/emote/6b4afbd2addead54037ba31988e8631a7fb9956a.png","初音未来-嫌弃":"https://i0.hdslb.com/bfs/emote/6560007ff02d8261dc36a55c58601cf8d7d2a680.png","初音未来-再见":"https://i0.hdslb.com/bfs/emote/06094b87ef45f7513bb4c22e049612d62cd5cd8e.png","嘉然-mua":"https://i0.hdslb.com/bfs/emote/74ea9b89f8923df6a123cabe6053762b9e776387.png","嘉然-安详":"https://i0.hdslb.com/bfs/emote/312359401cc72c34fcea3654cdba42db0f9f3dd0.png","嘉然-暗中观察":"https://i0.hdslb.com/bfs/emote/3acf0b43facfd0601f5ab88cca6e401aa4f5a02e.png","嘉然-锤头丧气":"https://i0.hdslb.com/bfs/emote/e6342840311ffeba8f2c58d1c360d76644e75dff.png","嘉然-点赞":"https://i0.hdslb.com/bfs/emote/7017d90d4ceb9ea042cef8adc70d35eeb1f95e7e.png","嘉然-嘉人们":"https://i0.hdslb.com/bfs/emote/d270845c9590da372e9b311cd6d976459acd1087.png","嘉然-嘉速心动":"https://i0.hdslb.com/bfs/emote/387035168f40ca81afce8b38303c60ceb0c5dc6c.png","嘉然-流口水":"https://i0.hdslb.com/bfs/emote/78bfeff475ad56a6d9379164b099f1ad8ecd7086.png","嘉然-你好":"https://i0.hdslb.com/bfs/emote/d1530f972a59bca97bc4b8acf4f7e16f989f37c3.png","嘉然-一米八":"https://i0.hdslb.com/bfs/emote/3c95c19137e964807a46effd8f83a443eeddd71c.png","嘉然-一眼真":"https://i0.hdslb.com/bfs/emote/ff436f5821db8b871517d0e5bb7ade7b64d3d0bf.png","嘉然-biu":"https://i0.hdslb.com/bfs/emote/4e94191613e85e68328062df15fd255357494e35.png","嘉然-绷不住了":"https://i0.hdslb.com/bfs/emote/4f0a9ee7708d71083dba4e79768ff0b7c308eaf4.png","嘉然-笔芯":"https://i0.hdslb.com/bfs/emote/332a6df0e6def8da77e09310a62f3bffdc397640.png","嘉然-番茄炒蛋拳":"https://i0.hdslb.com/bfs/emote/27eb784d39e981f44b8fa586616c6ab2ac0078cf.png","嘉然-嘉油":"https://i0.hdslb.com/bfs/emote/ee4d1908e2e9d0fe7ccd9c3a0423ecdc5f4d05aa.png","嘉然-剪刀手":"https://i0.hdslb.com/bfs/emote/04270781acabb35b309dc761b1aa7528a9e3f336.png","嘉然-略略略":"https://i0.hdslb.com/bfs/emote/88a0b8bf60d3582b2080d03c343f2a5e233b62ee.png","嘉然-敲打":"https://i0.hdslb.com/bfs/emote/438405970cbab6c6a06119bd9d9b474df62eb50c.png","嘉然-吓人":"https://i0.hdslb.com/bfs/emote/aa75d5dc15de31208304be653eef0267f152f172.png","嘉然-粉色小恶魔":"https://i0.hdslb.com/bfs/emote/c406c3c64973459162b8c18ea8928431fc837809.png","嘉然-干饭":"https://i0.hdslb.com/bfs/emote/26c5e8f82ac6b0aed88af93b21d0daaf64716f3e.png","嘉然-嘉步":"https://i0.hdslb.com/bfs/emote/72f1d84d13b45c0bdec9967d75f4320abce67cd4.png","嘉然-我有嘉心糖":"https://i0.hdslb.com/bfs/emote/7579c6085f984f39ff0f6a2cb710301a2b113fac.png","嘉然-我们是":"https://i0.hdslb.com/bfs/emote/770355925c296cf63736866a3531f1a0a9ba7b80.png","永雏塔菲-NO喵!":"https://i0.hdslb.com/bfs/emote/78e23445bf2ab026a4bc1ff6ff1945a3294b2375.png","永雏塔菲-不理你了":"https://i0.hdslb.com/bfs/emote/ec38a461c767fd0f4dee7346f82d81e5a88b176c.png","永雏塔菲-嘲笑":"https://i0.hdslb.com/bfs/emote/094c321f0829f0894f48195d6671358a1a43b53c.png","永雏塔菲-喵喵拳":"https://i0.hdslb.com/bfs/emote/897da2e9d791d4ec7d3d84a4dc5fd54b6abe004c.png","永雏塔菲-对呀对呀":"https://i0.hdslb.com/bfs/emote/37afa9e099d0c2ca9a4f3ff7d599e86060d6b942.png","永雏塔菲-尴尬":"https://i0.hdslb.com/bfs/emote/71a5b730a3c20ddac64f8e7803ffc00da97f7397.png","永雏塔菲-哈哈哈":"https://i0.hdslb.com/bfs/emote/b1f89d85b9c9f8553fe021c1e5785bc2995f8751.png","永雏塔菲-好热":"https://i0.hdslb.com/bfs/emote/b2038b7d4a30c6b65e4ce678ada349bc82bf0749.png","永雏塔菲-呼呼喵":"https://i0.hdslb.com/bfs/emote/0b006dc1e66f403931520da32003b42f29357276.png","永雏塔菲-开派对咯":"https://i0.hdslb.com/bfs/emote/182f48b6521d53ceb27f4947141326d46360710b.png","永雏塔菲-累":"https://i0.hdslb.com/bfs/emote/889f95e3b36f257cb6b68f420b8238a11c596d19.png","永雏塔菲-令人兴奋":"https://i0.hdslb.com/bfs/emote/c091fdfa02cfc3cbf6795d450300481d8116821c.png","永雏塔菲-摸头":"https://i0.hdslb.com/bfs/emote/a826477acfa607224dd4a6771431af3b18ee8f92.png","永雏塔菲-亲嘴":"https://i0.hdslb.com/bfs/emote/ce2123ec6b4f15eb8dfc2467f36fa3d69f2f97cd.png","永雏塔菲-闪亮登场":"https://i0.hdslb.com/bfs/emote/c7eff8db64b132e6757bacdd51e649e16965f6b9.png","永雏塔菲-生日快乐":"https://i0.hdslb.com/bfs/emote/9daed0ba16c89f983c7fcfa38e2bc8d1b80f7957.png","永雏塔菲-太好吃了":"https://i0.hdslb.com/bfs/emote/86b760ed0a466b5dc3fa0b1e64b9ba7d6b53b6ed.png","永雏塔菲-我帅吗":"https://i0.hdslb.com/bfs/emote/ff9a88e47b8afb26241953235c16d68a9505f931.png","永雏塔菲-嘻嘻喵":"https://i0.hdslb.com/bfs/emote/866c99dbf6cb5e054e8e94be60c1b37ff4581eaa.png","永雏塔菲-星星眼":"https://i0.hdslb.com/bfs/emote/bf3e961a1c3d4edf5ebdd063418495a1ed4c865f.png","永雏塔菲-疑惑":"https://i0.hdslb.com/bfs/emote/a1fef90f7864d68a141a0a233229dfb7dbe28f36.png","永雏塔菲-嘤嘤嘤":"https://i0.hdslb.com/bfs/emote/ba43546b013efffa7821dc21df6c79490cbafe72.png","永雏塔菲-有鬼":"https://i0.hdslb.com/bfs/emote/b33d0672a01810a6b26696bf4a56204dadd5ff31.png","永雏塔菲-晕了":"https://i0.hdslb.com/bfs/emote/d395fd944642b882a9226db81dcfa2e80307461c.png","永雏塔菲-震惊":"https://i0.hdslb.com/bfs/emote/36bea35a3a15b675b2f5f28529582f82cf65b1c9.png","tvgif-白眼":"https://i0.hdslb.com/bfs/emote/48f75163437445665a9be80bb316e4cb252c5415.gif","tvgif-doge":"https://i0.hdslb.com/bfs/emote/302d6c88c63ed162c81a49cafe7ed2709e6fb955.gif","tvgif-坏笑":"https://i0.hdslb.com/bfs/emote/5d2572efd09aab5dde9e2a198bb3f9ac1e2a982e.gif","tvgif-难过":"https://i0.hdslb.com/bfs/emote/9c6b41008a67755410f712334c64313df5f91b3f.gif","tvgif-生气":"https://i0.hdslb.com/bfs/emote/1902a5a2df5b5c931d88c12f0feb264b1e109d0d.gif","tvgif-委屈":"https://i0.hdslb.com/bfs/emote/af5a5853edb43a8178a8cb5df707fa5e88143699.gif","tvgif-斜眼笑":"https://i0.hdslb.com/bfs/emote/c66568b471192ca1f62f6ed4384dc1b283ab7508.gif","tvgif-呆":"https://i0.hdslb.com/bfs/emote/d3fa91e4db9215eb1e20ab9da44f1214aa4bda7b.gif","tvgif-发怒":"https://i0.hdslb.com/bfs/emote/3959eb81b952e4fa8d269d98f9e3639172d84073.gif","tvgif-惊吓":"https://i0.hdslb.com/bfs/emote/13549060757fcd92b11d0657d9b3b6038f97abb6.gif","tvgif-呕吐":"https://i0.hdslb.com/bfs/emote/db58e9442aae26694af18cc1683607cca3a16763.gif","tvgif-思考":"https://i0.hdslb.com/bfs/emote/b63f9146bfd985af014f8d6d4bdb498805be48f9.gif","tvgif-微笑":"https://i0.hdslb.com/bfs/emote/b98656855d782f61cb8edc7f7fca6563ecafff7e.gif","tvgif-疑问":"https://i0.hdslb.com/bfs/emote/fce1b1a0f3b0e39a2dc16a18508dba7b91e929f4.gif","tvgif-大哭":"https://i0.hdslb.com/bfs/emote/cba61f05f3039b02a7ffc0dfcd9d7995df9fdd74.gif","tvgif-鼓掌":"https://i0.hdslb.com/bfs/emote/be106e6b265883a9f28fbe10f7b765701e2618d4.gif","tvgif-抠鼻":"https://i0.hdslb.com/bfs/emote/696d9f93e722144dc2a78aeffc569418fdf3d565.gif","tvgif-亲亲":"https://i0.hdslb.com/bfs/emote/3534ea44ab74bd20352b88c245a06c4b4c46d271.gif","tvgif-调皮":"https://i0.hdslb.com/bfs/emote/fcd967395fd14e4dd5829fa7e8a967ce23205e52.gif","tvgif-笑哭":"https://i0.hdslb.com/bfs/emote/1c2fd1e8c9dde12812f86e5d4cbddd8993d98082.gif","tvgif-晕":"https://i0.hdslb.com/bfs/emote/030040ec5c9ddc9e3d067658c4139e7314ab42f8.gif","tvgif-点赞":"https://i0.hdslb.com/bfs/emote/30ecff401245fb56bcc1cf588d1809ac1ab1607c.gif","tvgif-害羞":"https://i0.hdslb.com/bfs/emote/411a3e459e8580f5bfd9f639a408247c4b509935.gif","tvgif-睡着":"https://i0.hdslb.com/bfs/emote/3c8b5e293261287a6203597e29b3de07df4d18c6.gif","tvgif-色":"https://i0.hdslb.com/bfs/emote/a0c6d99ab0ab63b8648f5283ff72cec04b604828.gif","tvgif-吐血":"https://i0.hdslb.com/bfs/emote/e17e4539e169d14a3389ff147afea760cebe5de5.gif","tvgif-无奈":"https://i0.hdslb.com/bfs/emote/eb4cb5f07cfd177c7e6a7914316717e56d9cc1d0.gif","tvgif-再见":"https://i0.hdslb.com/bfs/emote/344f61609ecce2008520dc8a977b6169215748a9.gif","tvgif-流汗":"https://i0.hdslb.com/bfs/emote/390bccec65eaff536bd5bb2a0c5b8b0bdea47334.gif","tvgif-偷笑":"https://i0.hdslb.com/bfs/emote/7f11e6f7f63e79112b833bd41fa13a83d7cd8474.gif","tvgif-抓狂":"https://i0.hdslb.com/bfs/emote/a476b93ecd8e94ac3257323fd822f91cef212de2.gif","tvgif-黑人问号":"https://i0.hdslb.com/bfs/emote/b609adf664be33224a9923262031165ae3e34cd2.gif","tvgif-困":"https://i0.hdslb.com/bfs/emote/91c2bf34ecf842d7016c01d841db3d4074bd281f.gif","tvgif-打脸":"https://i0.hdslb.com/bfs/emote/b0fad4856e59c1240e448437da3287bb5ce547e5.gif","tvgif-闭嘴":"https://i0.hdslb.com/bfs/emote/a3fc5388b09e945be3f18fe23bfed5874a0285b7.gif","tvgif-鄙视":"https://i0.hdslb.com/bfs/emote/293b5d459e6264ecf314d20937a936fa672ccd1e.gif","tvgif-腼腆":"https://i0.hdslb.com/bfs/emote/30984e8264324f901d19bea85dada7103b695534.gif","tvgif-馋":"https://i0.hdslb.com/bfs/emote/2525c5703c594e5f0752f68db8948773caebde47.gif","tvgif-可爱":"https://i0.hdslb.com/bfs/emote/f92d20f76258bc5f33fc9d7c5e2a1d41fef19a7c.gif","tvgif-发财":"https://i0.hdslb.com/bfs/emote/76131e52c9b033681b4c896c6024d29ef7ec7ec2.gif","tvgif-生病":"https://i0.hdslb.com/bfs/emote/beb94829fe04f1a41bd6ca611e1f6ca9ca169afa.gif","tvgif-流鼻血":"https://i0.hdslb.com/bfs/emote/8ef473f74a849420da712487b2f56ecca1f695f5.gif","tvgif-尴尬":"https://i0.hdslb.com/bfs/emote/e0b84ef5ee3e5b8978e584c7c5a6550c51d15f84.gif","tvgif-大佬":"https://i0.hdslb.com/bfs/emote/14ca0c05382b8741940942b2430b7a8d55c02f7e.gif","Kizuna AI-比心":"https://i0.hdslb.com/bfs/emote/a0d2674d85856be7a05865f6bc3638cf80fab7ac.png","Kizuna AI-哭哭":"https://i0.hdslb.com/bfs/emote/bfe2e784cd8c133497d4edd88cabc419d93e870a.png","Kizuna AI-嘤嘤嘤":"https://i0.hdslb.com/bfs/emote/57353a24a5bbe9af87117c4dfd9d7b758f20426e.png","Kizuna AI-无语":"https://i0.hdslb.com/bfs/emote/c3580dc39704d6cdfee4eaa879ea12424ece108c.png","Kizuna AI-震惊":"https://i0.hdslb.com/bfs/emote/75e870fa778be2f7e268d65426e0a79071fe905f.png","Kizuna AI-得意脸":"https://i0.hdslb.com/bfs/emote/188543c35f368824b09d7f57371db8f690bc3de9.png","Kizuna AI-OK":"https://i0.hdslb.com/bfs/emote/cedeb4f9e41c76f86945913162491af9028f6d40.png","Kizuna AI-嗨多摩":"https://i0.hdslb.com/bfs/emote/9f07e509af059f498203fd4a2183cabe3aefc0fa.png","Kizuna AI-花q":"https://i0.hdslb.com/bfs/emote/1d49d4ef2541e1db06a6aa78a098d5ca73191ed3.png","Kizuna AI-怀疑":"https://i0.hdslb.com/bfs/emote/72a193267f677545a8e1374324280ff71b5b25ad.png","Kizuna AI-惊讶":"https://i0.hdslb.com/bfs/emote/a8e14af6d52e668a59be38c2fc4450d47d24e80d.png","Kizuna AI-拿第一":"https://i0.hdslb.com/bfs/emote/8a2187235ec11065b5446dcfe49ef9db1a629000.png","Kizuna AI-天才天才":"https://i0.hdslb.com/bfs/emote/10cdd9af63be0014d62e596c4534e3166dee24de.png","Kizuna AI-摇晃悠悠":"https://i0.hdslb.com/bfs/emote/658bb1872ac8e3d7d22323f1eeff8e3591b9e308.png","Kizuna AI-原来如此":"https://i0.hdslb.com/bfs/emote/e7d6d59e4ce5a73302898b8d694658bd2cfb6db9.png"},
+      path: window.location.pathname,
+      recordIP: 'true',
+      //requiredFields: ['nick','mail'], //设置必填项
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script></div></body></html>
