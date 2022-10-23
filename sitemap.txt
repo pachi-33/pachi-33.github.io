@@ -1,3 +1,4 @@
+http://pachi-33.github.io/2022/10/23/CMake-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/
 http://pachi-33.github.io/2022/10/23/multipilThread3/
 http://pachi-33.github.io/2022/09/03/%E4%BA%8C%E5%8F%89%E6%A0%91/
 http://pachi-33.github.io/2022/08/24/multipilThread2/
@@ -21,6 +22,7 @@ http://pachi-33.github.io/tags/%E6%BA%90%E7%A0%81/
 http://pachi-33.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%9F%BA%E7%A1%80/
 http://pachi-33.github.io/tags/%E4%BB%BF%E5%87%BD%E6%95%B0/
 http://pachi-33.github.io/tags/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/
+http://pachi-33.github.io/tags/CMake/
 http://pachi-33.github.io/categories/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 http://pachi-33.github.io/categories/C-%E5%9F%BA%E7%A1%80/
 http://pachi-33.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/

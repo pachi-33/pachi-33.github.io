@@ -6,7 +6,7 @@
   <link href="http://pachi-33.github.io/atom.xml" rel="self"/>
   
   <link href="http://pachi-33.github.io/"/>
-  <updated>2022-10-23T04:21:13.964Z</updated>
+  <updated>2022-10-23T07:24:37.773Z</updated>
   <id>http://pachi-33.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CMake_常用配置</title>
+    <link href="http://pachi-33.github.io/2022/10/23/CMake-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/"/>
+    <id>http://pachi-33.github.io/2022/10/23/CMake-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</id>
+    <published>2022-10-23T09:16:55.000Z</published>
+    <updated>2022-10-23T07:24:37.773Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="CMakeLists常用配置"><a href="#CMakeLists常用配置" class="headerlink" title="CMakeLists常用配置"></a>CMakeLists常用配置</h2><p>使用CMake+vscode+CMakeTool进行开发环境的搭建，这里只用到最基础的部分</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.0</span>.<span class="number">0</span>)</span><br><span class="line"><span class="keyword">project</span>(main VERSION <span class="number">0.1</span>.<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_COMPILER <span class="string">&quot;g++&quot;</span>)<span class="comment">#设置c++编译器</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">aux_source_directory</span>(./src SrcFiles)<span class="comment">#源文件路径，可以设置多个</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(EXECUTABLE_OUTPUT_PATH  <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/debug)<span class="comment">#设置可执行文件输出路径</span></span><br><span class="line"><span class="keyword">add_executable</span>(main <span class="variable">$&#123;SrcFiles&#125;</span>)<span class="comment">#设置可执行文件的名称，make之后bin目录下出现main.exe</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/<span class="keyword">include</span>)<span class="comment">#添加头文件的搜索路径</span></span><br><span class="line"><span class="keyword">target_link_libraries</span>(main <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/lib/libeasyx.a)<span class="comment">#添加链接库路径</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="CMakeTool默认配置"><a href="#CMakeTool默认配置" class="headerlink" title="CMakeTool默认配置"></a>CMakeTool默认配置</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.0</span>.<span class="number">0</span>)</span><br><span class="line"><span class="keyword">project</span>(mian VERSION <span class="number">0.1</span>.<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(mian main.cpp)</span><br><span class="line"></span><br><span class="line"><span class="comment">##############################################################################################</span></span><br><span class="line"><span class="keyword">include</span>(CTest)<span class="comment">#CMake自带的测试工具</span></span><br><span class="line"><span class="keyword">enable_testing</span>()<span class="comment">#可以启用测试。一定要在根目录下的CMakeLists.txt中开启，不然执行make test时会报错。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">include</span>(CPack)<span class="comment">#CPack 是 CMake 内置的工具，支持打包成多种格式的安装包</span></span><br><span class="line"><span class="keyword">set</span>(CPACK_PROJECT_NAME <span class="variable">$&#123;PROJECT_NAME&#125;</span>)</span><br><span class="line"><span class="keyword">set</span>(CPACK_PROJECT_VERSION <span class="variable">$&#123;PROJECT_VERSION&#125;</span>)</span><br><span class="line"><span class="comment">###############################################################################################</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;CMakeLists常用配置&quot;&gt;&lt;a href=&quot;#CMakeLists常用配置&quot; class=&quot;headerlink&quot; title=&quot;CMakeLists常用配置&quot;&gt;&lt;/a&gt;CMakeLists常用配置&lt;/h2&gt;&lt;p&gt;使用CMake+vscode+CMakeTo</summary>
+      
+    
+    
+    
+    <category term="C++学习笔记" scheme="http://pachi-33.github.io/categories/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="CMake" scheme="http://pachi-33.github.io/tags/CMake/"/>
+    
+  </entry>
   
   <entry>
     <title>C++11并发与多线程学习记录（三）</title>
